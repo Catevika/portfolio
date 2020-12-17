@@ -1,0 +1,61 @@
+.sidebar-button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0.5rem;
+	left: 6rem;
+	width: 2.5rem;
+	padding: 0.25rem 0.5rem;
+	z-index: 120;
+}
+
+.sidebar-button {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 1.5rem;
+	height: 1.5rem;
+	z-index: 100;
+	cursor: pointer;
+}
+
+.sidebar-button-lines,
+.sidebar-button-lines::before,
+.sidebar-button-lines::after {
+	width: 1.5rem;
+	height: 0.1rem;
+	background-color: $white;
+	transition: all 0.5s ease-in-out;
+}
+
+.sidebar-button-lines::before,
+.sidebar-button-lines::after {
+	content: '';
+	position: absolute;
+}
+
+.sidebar-button-lines::before {
+	transform: translateY(-0.5rem);
+}
+
+.sidebar-button-lines::after {
+	transform: translateY(0.5rem);
+}
+
+// ? ** SIDEBAR BUTTON ANIMATION **
+.sidebar-button.open .sidebar-button-lines {
+	transform: translateX(2rem);
+	background: transparent;
+}
+
+.sidebar-button.open .sidebar-button-lines::before {
+	transform: rotate(45deg) translate(-1.5rem, 1.5rem);
+	background-color: $hover-color;
+}
+
+.sidebar-button.open .sidebar-button-lines::after {
+	transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
+	background-color: $hover-color;
+}
