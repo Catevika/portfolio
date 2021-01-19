@@ -1,0 +1,16 @@
+.thumbnail-container {
+	margin: 0 0.2rem;
+}
+
+.active-thumbnail {
+	list-style: none;
+	transition: 0.4s ease;
+	z-index: 1;
+}
+
+.thumbnail {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 17rem;
+}

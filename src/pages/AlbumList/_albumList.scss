@@ -1,0 +1,22 @@
+.album-title-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 15rem;
+	transition: all 0.3s ease-in-out;
+
+	.album-title {
+		font-size: 1.25rem;
+		color: $white;
+		margin: 0.5rem;
+		padding: 0.25rem 0.7rem;
+		background-color: $nav-bg-color;
+		border-radius: 25px;
+		text-decoration: none;
+
+		&:hover,
+		&:active {
+			background-color: $accentuation-color;
+		}
+	}
+}

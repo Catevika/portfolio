@@ -1,0 +1,13 @@
+.album-container {
+	list-style: none;
+}
+
+.active-photoMax {
+	height: 65vh;
+	transition: 0.4s ease;
+	z-index: 1;
+}
+
+.hidden-photoMax {
+	display: none;
+}

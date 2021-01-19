@@ -1,65 +1,88 @@
+import { NavLink /* , Link */ } from 'react-router-dom';
+import GalerieAlbumSubmenu from './GalerieAlbumSubmenu';
+
 const Sidebar = ({ isOpen }) => {
 	return (
 		<div className={isOpen ? 'sidebar visible' : 'sidebar hidden'}>
 			<ul className='menu-items'>
 				<li className='menu'>
-					<a className='menu-item' href='/'>
+					<NavLink
+						exact
+						activeClassName='current'
+						to={`${process.env.PUBLIC_URL}/`}
+						className='menu-item'
+					>
 						Accueil
-					</a>
+					</NavLink>
 				</li>
 				<li className='menu'>
-					<a className='menu-item' href='/galleries'>
-						Galleries
-					</a>
+					<NavLink
+						exact
+						activeClassName='current'
+						to={`${process.env.PUBLIC_URL}/galerie`}
+						className='menu-item'
+					>
+						Galerie
+					</NavLink>
 					<ul className='dropdown-menu'>
-						<li>
-							<a className='submenu menu-item' href='/portraits'>
-								Portraits
-							</a>
-						</li>
-						<li>
-							<a className='submenu menu-item' href='/street'>
-								Street Photos
-							</a>
-						</li>
-						<li>
-							<a className='submenu menu-item' href='/nature'>
-								Nature-morte
-							</a>
-						</li>
+						<GalerieAlbumSubmenu />
 					</ul>
 				</li>
 				<li className='menu'>
-					<a className='menu-item' href='/projets'>
-						Projets
-					</a>
-					<ul className='dropdown-menu'>
+					<NavLink
+						exact
+						activeClassName='current'
+						to={`${process.env.PUBLIC_URL}/seriesX23`}
+						className='menu-item'
+					>
+						Séries X23
+					</NavLink>
+					{/* <ul className='dropdown-menu'>
 						<li>
-							<a className='submenu menu-item' href='/nom1'>
+							<Link
+								className='submenu menu-item submenu-item'
+								to={`${process.env.PUBLIC_URL}/seriesX23/:nom1`}
+							>
 								Nom1
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a className='submenu menu-item' href='/nom2'>
+							<Link
+								className='submenu menu-item submenu-item'
+								to={`${process.env.PUBLIC_URL}/seriesX23/:nom2`}
+							>
 								Nom2
-							</a>
+							</Link>
 						</li>
 						<li>
-							<a className='submenu menu-item' href='/nom3'>
+							<Link
+								className='submenu menu-item submenu-item'
+								to={`${process.env.PUBLIC_URL}/seriesX23/:nom3`}
+							>
 								Nom3
-							</a>
+							</Link>
 						</li>
-					</ul>
+					</ul> */}
 				</li>
 				<li className='menu'>
-					<a className='menu-item' href='/apropos'>
+					<NavLink
+						exact
+						activeClassName='current'
+						to={`${process.env.PUBLIC_URL}/apropos`}
+						className='menu-item'
+					>
 						A propos
-					</a>
+					</NavLink>
 				</li>
 				<li className='menu'>
-					<a className='menu-item' href='/contact'>
+					<NavLink
+						exact
+						activeClassName='current'
+						to={`${process.env.PUBLIC_URL}/contact`}
+						className='menu-item'
+					>
 						Contact
-					</a>
+					</NavLink>
 				</li>
 			</ul>
 		</div>

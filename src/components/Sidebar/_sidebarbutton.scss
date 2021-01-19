@@ -47,15 +47,15 @@
 // ? ** SIDEBAR BUTTON ANIMATION **
 .sidebar-button.open .sidebar-button-lines {
 	transform: translateX(2rem);
-	background: transparent;
+	background: $sidebar-bg-color;
 }
 
 .sidebar-button.open .sidebar-button-lines::before {
 	transform: rotate(45deg) translate(-1.5rem, 1.5rem);
-	background-color: $hover-color;
+	background-color: $accentuation-color;
 }
 
 .sidebar-button.open .sidebar-button-lines::after {
 	transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
-	background-color: $hover-color;
+	background-color: $accentuation-color;
 }

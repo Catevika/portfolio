@@ -1,0 +1,22 @@
+.main-album-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 17rem;
+
+	.album-container {
+		list-style: none;
+
+		.album-photo {
+			-o-object-fit: cover;
+			object-fit: cover;
+			-o-object-position: 100% 0;
+			object-position: 100% 0;
+			height: 200px;
+			width: 200px;
+			padding: 0.25rem 0.4rem;
+			overflow: hidden;
+			cursor: pointer;
+		}
+	}
+}
