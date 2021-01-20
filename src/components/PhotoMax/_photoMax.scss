@@ -8,6 +8,40 @@
 	z-index: 1;
 }
 
-.hidden-photoMax {
-	display: none;
+.arrow-link {
+	text-decoration: none;
+
+	.arrow {
+		position: absolute;
+		top: 32.5%;
+		font-size: 4rem;
+		padding: 0.5rem;
+		color: rgba($white, 0.5);
+		background-color: rgba($sidebar-bg-color, 0.5);
+		border-radius: 10px;
+		cursor: pointer;
+		z-index: 100;
+
+		&:hover,
+		&:active {
+			background-color: rgba(255, 255, 255, 0.5);
+			color: $accentuation-color;
+		}
+	}
+
+	// .active-previous-arrow {
+	// 	display: visible;
+	// }
+
+	// .not-active-previous-arrow {
+	// 	display: hidden;
+	// }
+
+	.previous-arrow {
+		left: 24.5rem;
+	}
+
+	.next-arrow {
+		right: 24.5rem;
+	}
 }

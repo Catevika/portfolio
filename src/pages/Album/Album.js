@@ -41,6 +41,12 @@ const Album = () => {
 			{!isLoading && (
 				<>
 					<AlbumList />
+					<Link
+						to={`${process.env.PUBLIC_URL}/galerie`}
+						className='galerie-link'
+					>
+						Vers la galerie
+					</Link>
 					<ul className='main-album-container'>
 						{album.map((photo) => (
 							<li key={photo.id} className='album-container'>

@@ -251,56 +251,6 @@ body {
   }
 }
 
-.lightbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 2rem 17rem;
-}
-
-.lightbox .arrow-link {
-  text-decoration: none;
-}
-
-.lightbox .arrow-link .arrow {
-  position: absolute;
-  top: 32.5%;
-  font-size: 4rem;
-  padding: 0.5rem;
-  color: rgba(255, 255, 255, 0.5);
-  background-color: rgba(34, 34, 34, 0.5);
-  border-radius: 10px;
-  cursor: pointer;
-  z-index: 100;
-}
-
-.lightbox .arrow-link .arrow:hover, .lightbox .arrow-link .arrow:active {
-  background-color: rgba(255, 255, 255, 0.5);
-  color: #fd7d33;
-}
-
-.lightbox .arrow-link .active-previous-arrow {
-  display: visible;
-}
-
-.lightbox .arrow-link .not-active-previous-arrow {
-  display: hidden;
-}
-
-.lightbox .arrow-link .previous-arrow {
-  left: 24.5rem;
-}
-
-.lightbox .arrow-link .next-arrow {
-  right: 24.5rem;
-}
-
 .album-container {
   list-style: none;
 }
@@ -312,8 +262,33 @@ body {
   z-index: 1;
 }
 
-.hidden-photoMax {
-  display: none;
+.arrow-link {
+  text-decoration: none;
+}
+
+.arrow-link .arrow {
+  position: absolute;
+  top: 32.5%;
+  font-size: 4rem;
+  padding: 0.5rem;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(34, 34, 34, 0.5);
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.arrow-link .arrow:hover, .arrow-link .arrow:active {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #fd7d33;
+}
+
+.arrow-link .previous-arrow {
+  left: 24.5rem;
+}
+
+.arrow-link .next-arrow {
+  right: 24.5rem;
 }
 
 .thumbnail-container {
@@ -457,4 +432,31 @@ body {
   padding: 0.25rem 0.4rem;
   overflow: hidden;
   cursor: pointer;
+}
+
+.galerie-link {
+  position: absolute;
+  top: 1rem;
+  right: 5rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.galerie-link:hover,
+.galerie-link :active {
+  color: #fd7d33;
+}
+
+.lightbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem 17rem;
 }

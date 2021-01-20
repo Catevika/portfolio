@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { useLocalStorage } from '../../custom-hooks/useLocalStorage';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Spinner from '../Spinner/Spinner';
 
 const apiKey = process.env.REACT_APP_FLICKR_API_KEY;
@@ -14,6 +14,16 @@ const PhotoMax = () => {
 	const [isError, setIsError] = useState(false);
 
 	const [album, setAlbum] = useLocalStorage('album', []);
+
+	const [activeIndex, setActiveIndex] = useState(
+		album.findIndex((photo) => photo.id === photoId)
+	);
+
+	let activePhoto = {
+		id: album[activeIndex].id,
+		server: album[activeIndex].server,
+		secret: album[activeIndex].secret
+	};
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -32,12 +42,19 @@ const PhotoMax = () => {
 		fetchData();
 	}, [albumId, setAlbum]);
 
-	const index = album.findIndex((photo) => photo.id === photoId);
+	console.log(activeIndex);
 
-	const activePhoto = {
-		id: album[index].id,
-		server: album[index].server,
-		secret: album[index].secret
+	const handlePrevious = () => {
+		if (activeIndex === 0) {
+			setActiveIndex(album.length);
+		}
+		setActiveIndex((activeIndex) => activeIndex - 1);
+		return photoId === activePhoto.id;
+	};
+
+	const handleNext = () => {
+		setActiveIndex((activeIndex) => (activeIndex + 1) % album.length);
+		return photoId === activePhoto.id;
 	};
 
 	return (
@@ -45,15 +62,37 @@ const PhotoMax = () => {
 			{isError && <div>Something went wrong...</div>}
 			{isLoading && <Spinner />}
 			{!isLoading && (
-				<ul className='main-albumcontainer'>
-					<li key={activePhoto.id} className='album-container'>
-						<img
-							src={`https://live.staticflickr.com/${activePhoto.server}/${activePhoto.id}_${activePhoto.secret}_b.jpg`}
-							alt="Contenu de l'album"
-							className='active-photoMax'
-						/>
-					</li>
-				</ul>
+				<>
+					<Link
+						to={`${process.env.PUBLIC_URL}/galerie/${albumId}/${activePhoto.id}`}
+						className='arrow-link'
+					>
+						<div className='arrow previous-arrow' onClick={handlePrevious}>
+							&#60;
+						</div>
+					</Link>
+					<ul className='main-albumcontainer'>
+						{album.map((photo) => (
+							<li key={photo.id} className='album-container'>
+								{photo.id === photoId && (
+									<img
+										src={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_b.jpg`}
+										alt="Contenu de l'album"
+										className='active-photoMax'
+									/>
+								)}
+							</li>
+						))}
+					</ul>
+					<Link
+						to={`${process.env.PUBLIC_URL}/galerie/${albumId}/${activePhoto.id}`}
+						className='arrow-link'
+					>
+						<div className='arrow next-arrow' onClick={handleNext}>
+							&#62;
+						</div>
+					</Link>
+				</>
 			)}
 		</>
 	);
