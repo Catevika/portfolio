@@ -17,7 +17,7 @@ jobs:
           npm install
           npm run-script build
         env:
-        REACT_APP_FLICKR_API_KEY: ${{ secrets.RREACT_APP_FLICKR_API_KEY }}
+        REACT_APP_FLICKR_API_KEY: ${{ secrets.REACT_APP_FLICKR_API_KEY }}
         REACT_APP_FLICKR_API_USERID: ${{ secrets.REACT_APP_FLICKR_API_USERID }}
 
       - name: Deploy to GitHub Pages 🚀
