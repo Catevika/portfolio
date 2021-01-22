@@ -1,16 +1,23 @@
-.thumbnail-container {
-	margin: 0 0.2rem;
-}
-
-.active-thumbnail {
-	list-style: none;
-	transition: 0.4s ease;
-	z-index: 1;
-}
-
 .thumbnail {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	margin: 0 17rem;
+
+	.thumbnail-container {
+		margin: 0.05rem 0.15rem;
+
+		.thumbnail-item {
+			list-style: none;
+			transition: 0.4s ease;
+			z-index: 1;
+			opacity: 0.6;
+			&:hover {
+				opacity: 1;
+				border: 1px solid $white;
+				-webkit-filter: drop-shadow(0 0 1px rgba($white, 0.5));
+				filter: drop-shadow(0 0 4px rgba($white, 0.5));
+			}
+		}
+	}
 }

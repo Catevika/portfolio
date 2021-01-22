@@ -37,23 +37,27 @@ const PhotoThumbnail = () => {
 			{isError && <div>Something went wrong...</div>}
 			{isLoading && <Spinner />}
 			{!isLoading && (
-				<ul className='thumbnail'>
-					{album.map((photo) => (
-						<li key={photo.id} className='album-container thumbnail-container'>
-							<Link
-								to={`${process.env.PUBLIC_URL}/galerie/${albumId}/${photo.id}`}
+				<>
+					<ul className='thumbnail'>
+						{album.map((photo) => (
+							<li
+								key={photo.id}
+								className='album-container thumbnail-container'
 							>
-								<img
-									src={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_s.jpg`}
-									alt="Contenu de l'album"
-									className='active-thumbnail'
-								/>
-							</Link>
-						</li>
-					))}
-				</ul>
+								<Link
+									to={`${process.env.PUBLIC_URL}/galerie/${albumId}/${photo.id}`}
+								>
+									<img
+										src={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_s.jpg`}
+										alt="Contenu de l'album"
+										className='thumbnail-item'
+									/>
+								</Link>
+							</li>
+						))}
+					</ul>
+				</>
 			)}
-			;
 		</>
 	);
 };

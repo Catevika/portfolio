@@ -1,3 +1,18 @@
+.title {
+	font-size: 2rem;
+	width: 65vw;
+	color: $white;
+	margin: 1rem auto;
+	padding-top: 1rem;
+	border-top: 1px solid $white;
+	-webkit-filter: drop-shadow(0 0 3px $accentuation-color);
+	filter: drop-shadow(0 0 3px $accentuation-color);
+
+	.title-normal {
+		font-weight: 300;
+	}
+}
+
 .main-photo-container {
 	display: flex;
 	flex-wrap: wrap;

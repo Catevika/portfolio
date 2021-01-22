@@ -37,7 +37,7 @@ const Gallery = () => {
 			{!isLoading && (
 				<>
 					<AlbumList />
-
+					<h1 className='title'>Galerie</h1>
 					<ul className='main-photo-container'>
 						{gallery.map((photo) => (
 							<li key={photo.id} className='photo-container'>
@@ -45,7 +45,7 @@ const Gallery = () => {
 									src={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_m.jpg`}
 									alt='Contenu de la galerie'
 									className='photo'
-								></img>
+								/>
 							</li>
 						))}
 					</ul>

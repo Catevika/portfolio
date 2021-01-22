@@ -40,7 +40,7 @@ const AlbumSubmenu = () => {
 				exact
 				to={`${process.env.PUBLIC_URL}/galerie/${photoset.id}`}
 				key={photoset.id}
-				className='submenu menu-item'
+				className='submenu menu menu-item'
 			>
 				{album.title}
 			</NavLink>

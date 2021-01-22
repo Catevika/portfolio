@@ -14,7 +14,7 @@ import SidebarButton from './components/Sidebar/SidebarButton';
 
 import './css/main.css';
 
-function App() {
+const App = () => {
 	const [isOpen, setOpen] = useState(false);
 
 	const toggleSidebar = () => {
@@ -76,6 +76,6 @@ function App() {
 			</Switch>
 		</>
 	);
-}
+};
 
 export default App;

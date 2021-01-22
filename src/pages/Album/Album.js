@@ -14,6 +14,7 @@ const Album = () => {
 	const [isLoading, setIsLoading] = useState(true);
 	const [isError, setIsError] = useState(false);
 
+	const [albumTitle, setAlbumTitle] = useState('');
 	const [album, setAlbum] = useLocalStorage('album', []);
 
 	useEffect(() => {
@@ -23,7 +24,10 @@ const Album = () => {
 					`https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=${apiKey}&&photoset_id=${albumId}&user_id=${userId}&format=json&nojsoncallback=1`
 				);
 
-				const photosFromAlbum = result.data.photoset.photo;
+				const AlbumOfPhotos = result.data.photoset;
+				setAlbumTitle(AlbumOfPhotos.title);
+
+				const photosFromAlbum = AlbumOfPhotos.photo;
 				setAlbum(photosFromAlbum);
 			} catch (error) {
 				setIsError(true);
@@ -47,6 +51,9 @@ const Album = () => {
 					>
 						Vers la galerie
 					</Link>
+					<h1 className='title'>
+						Album: <span className='title-normal'>{albumTitle}</span>
+					</h1>
 					<ul className='main-album-container'>
 						{album.map((photo) => (
 							<li key={photo.id} className='album-container'>
