@@ -8,6 +8,7 @@ import Photo from './pages/Photo/Photo';
 import Projects from './pages/Projects/Projects';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
+import ScrollAlbum from './pages/ScrollAlbum/ScrollAlbum';
 
 import Sidebar from './components/Sidebar/Sidebar';
 import SidebarButton from './components/Sidebar/SidebarButton';
@@ -37,6 +38,11 @@ const App = () => {
 					exact
 					path={`${process.env.PUBLIC_URL}/galerie/:albumId`}
 					component={Album}
+				/>
+				<Route
+					exact
+					path={`${process.env.PUBLIC_URL}/galerie/:albumId/aperçu`}
+					component={ScrollAlbum}
 				/>
 				<Route
 					exact

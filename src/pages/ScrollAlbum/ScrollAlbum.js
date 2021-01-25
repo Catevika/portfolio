@@ -3,19 +3,18 @@ import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useLocalStorage } from '../../custom-hooks/useLocalStorage';
 import Spinner from '../../components/Spinner/Spinner';
-import AlbumList from '../AlbumList/AlbumList';
 
 const apiKey = process.env.REACT_APP_FLICKR_API_KEY;
 const userId = process.env.REACT_APP_FLICKR_API_USERID;
 
-const Album = () => {
+const ScrollAlbum = () => {
 	let { albumId } = useParams();
 
 	const [isLoading, setIsLoading] = useState(true);
 	const [isError, setIsError] = useState(false);
 
-	const [albumTitle, setAlbumTitle] = useState('');
 	const [album, setAlbum] = useLocalStorage('album', []);
+	const [albumTitle, setAlbumTitle] = useState('');
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -27,7 +26,7 @@ const Album = () => {
 				const AlbumOfPhotos = result.data.photoset;
 				setAlbumTitle(AlbumOfPhotos.title);
 
-				const photosFromAlbum = AlbumOfPhotos.photo;
+				const photosFromAlbum = result.data.photoset.photo;
 				setAlbum(photosFromAlbum);
 			} catch (error) {
 				setIsError(true);
@@ -41,44 +40,44 @@ const Album = () => {
 		<>
 			{isError && <div>Something went wrong...</div>}
 			{isLoading && <Spinner />}
-
 			{!isLoading && (
 				<>
-					<AlbumList />
 					<Link
 						to={`${process.env.PUBLIC_URL}/galerie`}
 						className='galerie-link up'
 					>
 						Vers la galerie
 					</Link>
+					<Link
+						to={`${process.env.PUBLIC_URL}/galerie/${albumId}`}
+						className='galerie-link bottom'
+					>
+						Vers l'album
+					</Link>
 					<h1 className='title'>
 						Album: <span className='title-normal'>{albumTitle}</span>
 					</h1>
-					<Link
-						to={`${process.env.PUBLIC_URL}/galerie/${albumId}/aperçu`}
-						className='galerie-link center'
-					>
-						Aperçu rapide
-					</Link>
-					<ul className='main-album-container'>
-						{album.map((photo) => (
-							<li key={photo.id} className='album-container'>
-								<Link
-									to={`${process.env.PUBLIC_URL}/galerie/${albumId}/${photo.id}`}
-								>
-									<img
-										src={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_m.jpg`}
-										alt="Contenu de l'album"
-										className='album-photo'
-									/>
-								</Link>
-							</li>
-						))}
-					</ul>
+					<div className='photoMax-container'>
+						<ul className='main-photoMax-container'>
+							<div className='photoMax-sub-container'>
+								{album.map((photo, i) => (
+									<li key={i} className='album-container'>
+										<section className='album-photoMax-section'>
+											<img
+												src={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_b.jpg`}
+												alt="Contenu de l'album"
+												className='photoMax'
+											/>
+										</section>
+									</li>
+								))}
+							</div>
+						</ul>
+					</div>
 				</>
 			)}
 		</>
 	);
 };
 
-export default Album;
+export default ScrollAlbum;

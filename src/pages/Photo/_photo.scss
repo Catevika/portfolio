@@ -1,7 +1,5 @@
 .galerie-link {
 	position: absolute;
-	top: 1rem;
-	right: 5rem;
 	text-decoration: none;
 	font-size: 1.2rem;
 	color: $white;
@@ -10,6 +8,21 @@
 	:active {
 		color: $accentuation-color;
 	}
+}
+
+.up {
+	top: 1rem;
+	right: 5rem;
+}
+
+.center {
+	top: 43vh;
+	right: 5rem;
+}
+
+.bottom {
+	top: 3rem;
+	right: 5rem;
 }
 
 .lightbox {

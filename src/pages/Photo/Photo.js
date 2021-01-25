@@ -10,9 +10,15 @@ const Photo = () => {
 			<section className='lightbox'>
 				<Link
 					to={`${process.env.PUBLIC_URL}/galerie/${albumId}`}
-					className='galerie-link'
+					className='galerie-link up'
 				>
 					Vers l'album
+				</Link>
+				<Link
+					to={`${process.env.PUBLIC_URL}/galerie/${albumId}/aperçu`}
+					className='galerie-link center'
+				>
+					Aperçu rapide
 				</Link>
 				<PhotoMax />
 			</section>
