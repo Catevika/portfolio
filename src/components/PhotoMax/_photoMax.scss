@@ -1,12 +1,46 @@
-.album-container {
-	list-style: none;
-}
+// ::-webkit-scrollbar {
+// 	width: 12px;
+// }
 
-.active-photoMax {
-	height: 72vh;
-	transition: 0.4s ease;
-	z-index: 1;
+// ::-webkit-scrollbar-track {
+// 	background: rgba($white, 0.5);
+// }
+
+// ::-webkit-scrollbar-thumb {
+// 	background: $accentuation-color;
+// }
+
+.main-photoMax-container {
+	display: flex;
+	justify-content: center;
+	margin: 0 17rem;
+
+	// .photoMax-sub-container {
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	align-items: center;
+	// 	height: 74vh;
+	// 	width: 54vw;
+	// 	overflow: hidden;
+	// 	overflow-y: scroll;
+	// 	-ms-scroll-snap-type: y mandatory;
+	// 	scroll-snap-type: y mandatory;
+
+	.album-container {
+		list-style: none;
+
+		// .album-photoMax-section {
+		// 	scroll-snap-align: start;
+
+		.photoMax {
+			height: 74vh;
+			width: auto;
+			transition: 0.4s ease;
+		}
+	}
 }
+// 	}
+// }
 
 // .arrow {
 // 	position: absolute;

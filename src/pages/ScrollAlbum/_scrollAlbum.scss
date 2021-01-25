@@ -1,0 +1,27 @@
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	background: rgba($white, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+	background: $accentuation-color;
+}
+
+.photoMax-sub-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 74vh;
+	width: 54vw;
+	overflow: hidden;
+	overflow-y: scroll;
+	-ms-scroll-snap-type: y mandatory;
+	scroll-snap-type: y mandatory;
+}
+
+.album-photoMax-section {
+	scroll-snap-align: start;
+}
