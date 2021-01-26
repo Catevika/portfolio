@@ -32,6 +32,8 @@ const PhotoMax = () => {
 		fetchData();
 	}, [albumId, setAlbum]);
 
+	// ! ALLER ICI: https://github.com/JamesIves/github-pages-deploy-action/packages/229985 pour configurer les github actions
+
 	// const [activeIndex, setActiveIndex] = useState(
 	// 	album.findIndex((photo) => photo.id === photoId)
 	// );
