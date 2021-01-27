@@ -16,7 +16,6 @@
     "typescript": "^3.7.0-beta"
   },
   "scripts": {
-    "sass-production": "node-sass -w main.scss -o static/css",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "predeploy": "npm run build",
