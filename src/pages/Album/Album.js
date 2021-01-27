@@ -45,17 +45,14 @@ const Album = () => {
 			{!isLoading && (
 				<>
 					<AlbumList />
-					<Link
-						to={`${process.env.PUBLIC_URL}/galerie`}
-						className='galerie-link up'
-					>
+					<Link to='/galerie' className='galerie-link up'>
 						Vers la galerie
 					</Link>
 					<h1 className='title'>
 						Album: <span className='title-normal'>{albumTitle}</span>
 					</h1>
 					<Link
-						to={`${process.env.PUBLIC_URL}/galerie/${albumId}/aperçu`}
+						to={`/galerie/${albumId}/aperçu`}
 						className='galerie-link center'
 					>
 						Aperçu rapide
@@ -63,9 +60,7 @@ const Album = () => {
 					<ul className='main-album-container'>
 						{album.map((photo) => (
 							<li key={photo.id} className='album-container'>
-								<Link
-									to={`${process.env.PUBLIC_URL}/galerie/${albumId}/${photo.id}`}
-								>
+								<Link to={`/galerie/${albumId}/${photo.id}`}>
 									<img
 										src={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_m.jpg`}
 										alt="Contenu de l'album"

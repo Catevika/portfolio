@@ -44,9 +44,7 @@ const PhotoThumbnail = () => {
 								key={photo.id}
 								className='album-container thumbnail-container'
 							>
-								<Link
-									to={`${process.env.PUBLIC_URL}/galerie/${albumId}/${photo.id}`}
-								>
+								<Link to={`/galerie/${albumId}/${photo.id}`}>
 									<img
 										src={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_s.jpg`}
 										alt="Contenu de l'album"

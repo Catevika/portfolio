@@ -42,16 +42,10 @@ const ScrollAlbum = () => {
 			{isLoading && <Spinner />}
 			{!isLoading && (
 				<>
-					<Link
-						to={`${process.env.PUBLIC_URL}/galerie`}
-						className='galerie-link up'
-					>
+					<Link to='/galerie' className='galerie-link up'>
 						Vers la galerie
 					</Link>
-					<Link
-						to={`${process.env.PUBLIC_URL}/galerie/${albumId}`}
-						className='galerie-link bottom'
-					>
+					<Link to={`/galerie/${albumId}`} className='galerie-link bottom'>
 						Vers l'album
 					</Link>
 					<h1 className='title'>

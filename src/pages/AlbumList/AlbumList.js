@@ -38,7 +38,7 @@ const AlbumList = () => {
 		return (
 			<NavLink
 				exact
-				to={`${process.env.PUBLIC_URL}/galerie/${album.id}`}
+				to={`/galerie/${album.id}`}
 				key={album.id}
 				className='album-title'
 			>

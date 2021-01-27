@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { /* Link, */ useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useLocalStorage } from '../../custom-hooks/useLocalStorage';
 import Spinner from '../Spinner/Spinner';
 
@@ -40,7 +40,6 @@ const PhotoMax = () => {
 				<>
 					<div className='photoMax-container'>
 						<ul className='main-photoMax-container'>
-							{/* <div className='photoMax-sub-container'> */}
 							{album.map((photo, i) => (
 								<li key={i} className='album-container'>
 									{photo.id === photoId && (

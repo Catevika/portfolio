@@ -6,12 +6,7 @@ const Sidebar = ({ isOpen }) => {
 		<div className={isOpen ? 'sidebar visible' : 'sidebar hidden'}>
 			<ul className='menu-items'>
 				<li className='menu'>
-					<NavLink
-						exact
-						activeClassName='current'
-						to={`${process.env.PUBLIC_URL}/`}
-						className='menu-item'
-					>
+					<NavLink exact activeClassName='current' to='/' className='menu-item'>
 						Accueil
 					</NavLink>
 				</li>
@@ -19,7 +14,7 @@ const Sidebar = ({ isOpen }) => {
 					<NavLink
 						exact
 						activeClassName='current'
-						to={`${process.env.PUBLIC_URL}/galerie`}
+						to='/galerie'
 						className='menu-item'
 					>
 						Galerie
@@ -32,7 +27,7 @@ const Sidebar = ({ isOpen }) => {
 					<NavLink
 						exact
 						activeClassName='current'
-						to={`${process.env.PUBLIC_URL}/seriesX23`}
+						to='/seriesX23'
 						className='menu-item'
 					>
 						Séries X23
@@ -41,7 +36,7 @@ const Sidebar = ({ isOpen }) => {
 						<li>
 							<Link
 								className='submenu menu-item submenu-item'
-								to={`${process.env.PUBLIC_URL}/seriesX23/:nom1`}
+								to='/seriesX23/:nom1'
 							>
 								Nom1
 							</Link>
@@ -49,7 +44,7 @@ const Sidebar = ({ isOpen }) => {
 						<li>
 							<Link
 								className='submenu menu-item submenu-item'
-								to={`${process.env.PUBLIC_URL}/seriesX23/:nom2`}
+								to='/seriesX23/:nom2'
 							>
 								Nom2
 							</Link>
@@ -57,7 +52,7 @@ const Sidebar = ({ isOpen }) => {
 						<li>
 							<Link
 								className='submenu menu-item submenu-item'
-								to={`${process.env.PUBLIC_URL}/seriesX23/:nom3`}
+								to='/seriesX23/:nom3'
 							>
 								Nom3
 							</Link>
@@ -68,7 +63,7 @@ const Sidebar = ({ isOpen }) => {
 					<NavLink
 						exact
 						activeClassName='current'
-						to={`${process.env.PUBLIC_URL}/apropos`}
+						to='/apropos'
 						className='menu-item'
 					>
 						A propos
@@ -78,7 +73,7 @@ const Sidebar = ({ isOpen }) => {
 					<NavLink
 						exact
 						activeClassName='current'
-						to={`${process.env.PUBLIC_URL}/contact`}
+						to='/contact'
 						className='menu-item'
 					>
 						Contact
