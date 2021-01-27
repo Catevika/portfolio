@@ -14,8 +14,8 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          npm run sass-production
           npm install
+          npm run sass-production
           npm run-script build
         env:
           REACT_APP_FLICKR_API_KEY: ${{ secrets.REACT_APP_FLICKR_API_KEY }}
