@@ -31,52 +31,52 @@ const App = () => {
 				<Route exact path={`${process.env.PUBLIC_URL}/`} component={Home} />
 				<Route
 					exact
-					path={`${process.env.PUBLIC_URL}/galerie`}
+					path={`${process.env.PUBLIC_URL}/#/galerie`}
 					component={Gallery}
 				/>
 				<Route
 					exact
-					path={`${process.env.PUBLIC_URL}/galerie/:albumId`}
+					path={`${process.env.PUBLIC_URL}/#/galerie/:albumId`}
 					component={Album}
 				/>
 				<Route
 					exact
-					path={`${process.env.PUBLIC_URL}/galerie/:albumId/aperçu`}
+					path={`${process.env.PUBLIC_URL}/#/galerie/:albumId/aperçu`}
 					component={ScrollAlbum}
 				/>
 				<Route
 					exact
-					path={`${process.env.PUBLIC_URL}/galerie/:albumId/:photoId`}
+					path={`${process.env.PUBLIC_URL}/#/galerie/:albumId/:photoId`}
 					component={Photo}
 				/>
 				<Route
 					exact
-					path={`${process.env.PUBLIC_URL}/projets`}
+					path={`${process.env.PUBLIC_URL}/#/projets`}
 					component={Projects}
 				/>
 				{/* <Route
 					exact
-					path={`${process.env.PUBLIC_URL}/projets/:nom1`}
+					path={`${process.env.PUBLIC_URL}/#/projets/:nom1`}
 					component={Nom1}
 				/>
 				<Route
 					exact
-					path={`${process.env.PUBLIC_URL}/projets/:nom2`}
+					path={`${process.env.PUBLIC_URL}/#/projets/:nom2`}
 					component={Nom2}
 				/>
 				<Route
 					exact
-					path={`${process.env.PUBLIC_URL}/projets/:nom3`}
+					path={`${process.env.PUBLIC_URL}/#/projets/:nom3`}
 					component={Nom3}
 				/> */}
 				<Route
 					exact
-					path={`${process.env.PUBLIC_URL}/apropos`}
+					path={`${process.env.PUBLIC_URL}/#/apropos`}
 					component={About}
 				/>
 				<Route
 					exact
-					path={`${process.env.PUBLIC_URL}/contact`}
+					path={`${process.env.PUBLIC_URL}/#/contact`}
 					component={Contact}
 				/>
 			</Switch>
