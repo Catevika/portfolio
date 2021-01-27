@@ -24,5 +24,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REACT_APP_FLICKR_API_KEY: ${{ secrets.REACT_APP_FLICKR_API_KEY }}
+          REACT_APP_FLICKR_API_USERID: ${{ secrets.REACT_APP_FLICKR_API_USERID }}
           BRANCH: gh-pages
           FOLDER: build
