@@ -1,15 +1,31 @@
 .main-photoMax-container {
 	display: flex;
 	justify-content: center;
-	margin: 0 17rem;
+	width: 65vw;
+
+	@media #{$phone} {
+		height: auto;
+		width: 100vw;
+	}
 
 	.album-container {
 		list-style: none;
+
+		@media #{$phone} {
+			display: flex;
+			justify-content: center;
+		}
 
 		.photoMax {
 			height: 74vh;
 			width: auto;
 			transition: 0.4s ease;
+
+			@media #{$phone} {
+				height: auto;
+				width: 75vw;
+				margin-top: 0.5rem;
+			}
 		}
 	}
 }

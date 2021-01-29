@@ -45,18 +45,20 @@ const Album = () => {
 			{!isLoading && (
 				<>
 					<AlbumList />
-					<Link to='/galerie' className='galerie-link up'>
-						Vers la galerie
-					</Link>
+					<div className='links'>
+						<Link to='/galerie' className='gallery-link up'>
+							Vers la galerie
+						</Link>
+						<Link
+							to={`/galerie/${albumId}/aperçu`}
+							className='gallery-link center'
+						>
+							Aperçu rapide
+						</Link>
+					</div>
 					<h1 className='title'>
-						Album: <span className='title-normal'>{albumTitle}</span>
+						Album : <span className='title-normal'>{albumTitle}</span>
 					</h1>
-					<Link
-						to={`/galerie/${albumId}/aperçu`}
-						className='galerie-link center'
-					>
-						Aperçu rapide
-					</Link>
 					<ul className='main-album-container'>
 						{album.map((photo) => (
 							<li key={photo.id} className='album-container'>

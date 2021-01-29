@@ -42,14 +42,16 @@ const ScrollAlbum = () => {
 			{isLoading && <Spinner />}
 			{!isLoading && (
 				<>
-					<Link to='/galerie' className='galerie-link up'>
-						Vers la galerie
-					</Link>
-					<Link to={`/galerie/${albumId}`} className='galerie-link bottom'>
-						Vers l'album
-					</Link>
+					<div className='links'>
+						<Link to='/galerie' className='gallery-link up'>
+							Vers la galerie
+						</Link>
+						<Link to={`/galerie/${albumId}`} className='gallery-link bottom'>
+							Vers l'album
+						</Link>
+					</div>
 					<h1 className='title'>
-						Album: <span className='title-normal'>{albumTitle}</span>
+						Album : <span className='title-normal'>{albumTitle}</span>
 					</h1>
 					<div className='photoMax-container'>
 						<ul className='main-photoMax-container'>

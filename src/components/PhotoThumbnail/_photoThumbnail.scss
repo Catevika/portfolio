@@ -5,6 +5,11 @@
 	justify-content: center;
 	margin: 0 17rem;
 
+	@media #{$phone} {
+		margin: 0;
+		margin-top: 0.5rem;
+	}
+
 	.thumbnail-container {
 		margin: 0.05rem 0.15rem;
 

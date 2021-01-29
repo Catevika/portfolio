@@ -8,12 +8,17 @@ const Photo = () => {
 	return (
 		<>
 			<section className='lightbox'>
-				<Link to={`/galerie/${albumId}`} className='galerie-link up'>
-					Vers l'album
-				</Link>
-				<Link to={`/galerie/${albumId}/aperçu`} className='galerie-link center'>
-					Aperçu rapide
-				</Link>
+				<div className='links'>
+					<Link to={`/galerie/${albumId}`} className='gallery-link up'>
+						Vers l'album
+					</Link>
+					<Link
+						to={`/galerie/${albumId}/aperçu`}
+						className='gallery-link center'
+					>
+						Aperçu rapide
+					</Link>
+				</div>
 				<PhotoMax />
 			</section>
 			<PhotoThumbnail />

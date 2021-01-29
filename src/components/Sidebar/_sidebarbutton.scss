@@ -1,13 +1,20 @@
-.sidebar-button-container {
+.sidebar-button-main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.sidebar-button-container {
 	position: fixed;
 	top: 0.5rem;
 	left: 6rem;
 	width: 2.5rem;
 	padding: 0.25rem 0.5rem;
 	z-index: 120;
+
+	@media #{$phone} {
+		left: 0;
+	}
 }
 
 .sidebar-button {

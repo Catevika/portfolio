@@ -5,6 +5,10 @@
 	justify-content: center;
 	margin: 0 17rem;
 
+	@media #{$phone} {
+		margin: 0;
+	}
+
 	.album-container {
 		position: relative;
 		list-style: none;

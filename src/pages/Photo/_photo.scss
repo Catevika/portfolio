@@ -1,32 +1,72 @@
-.galerie-link {
-	position: absolute;
-	text-decoration: none;
-	font-size: 1.2rem;
-	color: $white;
-
-	&:hover,
-	:active {
-		color: $accentuation-color;
+.links {
+	position: relative;
+	@media #{$phone} {
+		display: none;
 	}
-}
 
-.up {
-	top: 1rem;
-	right: 5rem;
-}
+	.gallery-link {
+		position: absolute;
+		text-decoration: none;
+		font-size: 1.2rem;
+		color: $white;
 
-.center {
-	top: 43vh;
-	right: 5rem;
-}
+		// @media #{$phone} {
+		// 	position: relative;
+		// 	display: flex;
+		// 	flex-direction: column;
+		// 	align-content: center;
+		// }
 
-.bottom {
-	top: 3rem;
-	right: 5rem;
+		&:hover,
+		:active {
+			color: $accentuation-color;
+		}
+	}
+
+	.up {
+		top: 1rem;
+		right: 5rem;
+
+		// @media #{$phone} {
+		// 	top: 0;
+		// 	right: 0;
+		// 	margin-top: 0.6rem;
+		// 	text-align: center;
+		// }
+	}
+
+	.center {
+		top: 43vh;
+		right: 5rem;
+
+		// @media #{$phone} {
+		// 	top: 0;
+		// 	right: 0;
+		// 	margin-top: 1rem;
+		// 	text-align: center;
+		// }
+	}
+
+	.bottom {
+		top: 3rem;
+		right: 5rem;
+
+		// @media #{$phone} {
+		// 	top: 0;
+		// 	right: 0;
+		// 	margin-top: 1rem;
+		// 	text-align: center;
+		// }
+	}
 }
 
 .lightbox {
 	display: flex;
 	justify-content: center;
 	margin: 1rem 17rem;
+
+	@media #{$phone} {
+		display: inline;
+		margin: 0;
+	}
 }

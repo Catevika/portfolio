@@ -13,3 +13,8 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	min-height: 100vh;
 }
+
+// Media queries variables
+$desktop: 'only screen and (max-width: 1024px)';
+$tablet: 'only screen and (max-width: 768px)';
+$phone: 'only screen and (max-width: 320px)';

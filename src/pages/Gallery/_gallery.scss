@@ -8,6 +8,10 @@
 	-webkit-filter: drop-shadow(0 0 3px $accentuation-color);
 	filter: drop-shadow(0 0 3px $accentuation-color);
 
+	@media #{$phone} {
+		margin: 6rem auto;
+	}
+
 	.title-normal {
 		font-weight: 300;
 	}
@@ -17,7 +21,9 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin: 0 17rem;
+	align-content: center;
+	margin: 0 auto;
+	width: 65vw;
 
 	.photo-container {
 		list-style: none;
