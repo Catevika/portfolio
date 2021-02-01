@@ -9,6 +9,10 @@
 		margin: 0;
 	}
 
+	@media #{$tablet} {
+		margin: 0;
+	}
+
 	.album-container {
 		position: relative;
 		list-style: none;

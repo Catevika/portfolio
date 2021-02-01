@@ -1,5 +1,4 @@
 .links {
-	position: relative;
 	@media #{$phone} {
 		display: none;
 	}
@@ -10,13 +9,6 @@
 		font-size: 1.2rem;
 		color: $white;
 
-		// @media #{$phone} {
-		// 	position: relative;
-		// 	display: flex;
-		// 	flex-direction: column;
-		// 	align-content: center;
-		// }
-
 		&:hover,
 		:active {
 			color: $accentuation-color;
@@ -24,49 +16,33 @@
 	}
 
 	.up {
-		top: 1rem;
+		top: 1.5rem;
 		right: 5rem;
-
-		// @media #{$phone} {
-		// 	top: 0;
-		// 	right: 0;
-		// 	margin-top: 0.6rem;
-		// 	text-align: center;
-		// }
+		z-index: 110;
 	}
 
 	.center {
 		top: 43vh;
 		right: 5rem;
+		z-index: 110;
 
-		// @media #{$phone} {
-		// 	top: 0;
-		// 	right: 0;
-		// 	margin-top: 1rem;
-		// 	text-align: center;
-		// }
+		@media #{$tablet} {
+			top: 3.5rem;
+		}
 	}
 
 	.bottom {
-		top: 3rem;
+		top: 3.5rem;
 		right: 5rem;
-
-		// @media #{$phone} {
-		// 	top: 0;
-		// 	right: 0;
-		// 	margin-top: 1rem;
-		// 	text-align: center;
-		// }
+		z-index: 110;
 	}
 }
 
 .lightbox {
 	display: flex;
 	justify-content: center;
-	margin: 1rem 17rem;
 
 	@media #{$phone} {
-		display: inline;
-		margin: 0;
+		margin: 0 0 1rem;
 	}
 }

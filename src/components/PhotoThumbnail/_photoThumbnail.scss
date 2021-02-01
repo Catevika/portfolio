@@ -7,6 +7,10 @@
 
 	@media #{$phone} {
 		margin: 0;
+	}
+
+	@media #{$tablet} {
+		margin: 0;
 		margin-top: 0.5rem;
 	}
 

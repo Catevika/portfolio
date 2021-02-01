@@ -12,6 +12,10 @@
 		width: 85%;
 	}
 
+	// @media #{$tablet} {
+	// 	width: 80%;
+	// }
+
 	&.hidden {
 		transform: translate(-100%);
 	}
@@ -27,8 +31,12 @@
 		padding-left: 1rem;
 
 		@media #{$phone} {
-			font-size: 1rem;
 			padding-left: 0.5rem;
+		}
+
+		@media #{$tablet} {
+			font-size: 1.5rem;
+			padding-left: 1rem;
 		}
 	}
 
@@ -42,6 +50,10 @@
 		background-color: rgba($sidebar-bg-color, 0.5);
 
 		@media #{$phone} {
+			background-color: $sidebar-bg-color;
+		}
+
+		@media #{$tablet} {
 			background-color: $sidebar-bg-color;
 		}
 

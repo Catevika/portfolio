@@ -26,7 +26,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 767px) {
   .sidebar {
     width: 85%;
   }
@@ -49,10 +49,16 @@ body {
   padding-left: 1rem;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 767px) {
   .sidebar .menu {
-    font-size: 1rem;
     padding-left: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .sidebar .menu {
+    font-size: 1.5rem;
+    padding-left: 1rem;
   }
 }
 
@@ -74,7 +80,13 @@ body {
   background-color: rgba(34, 34, 34, 0.5);
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 767px) {
+  .sidebar .menu-items {
+    background-color: #222;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
   .sidebar .menu-items {
     background-color: #222;
   }
@@ -149,9 +161,16 @@ body {
   z-index: 120;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 767px) {
   .sidebar-button-container {
     left: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .sidebar-button-container {
+    top: 1rem;
+    left: 1rem;
   }
 }
 
@@ -172,6 +191,12 @@ body {
   cursor: pointer;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .sidebar-button {
+    width: 2rem;
+  }
+}
+
 .sidebar-button-lines,
 .sidebar-button-lines::before,
 .sidebar-button-lines::after {
@@ -180,6 +205,14 @@ body {
   background-color: #fff;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .sidebar-button-lines,
+  .sidebar-button-lines::before,
+  .sidebar-button-lines::after {
+    width: 2rem;
+  }
 }
 
 .sidebar-button-lines::before,
@@ -193,9 +226,23 @@ body {
           transform: translateY(-0.5rem);
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .sidebar-button-lines::before {
+    -webkit-transform: translateY(-0.7rem);
+            transform: translateY(-0.7rem);
+  }
+}
+
 .sidebar-button-lines::after {
   -webkit-transform: translateY(0.5rem);
           transform: translateY(0.5rem);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .sidebar-button-lines::after {
+    -webkit-transform: translateY(0.7rem);
+            transform: translateY(0.7rem);
+  }
 }
 
 .sidebar-button.open .sidebar-button-lines {
@@ -210,10 +257,24 @@ body {
   background-color: #fd7d33;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .sidebar-button.open .sidebar-button-lines::before {
+    -webkit-transform: rotate(45deg) translate(-1.3rem, 1.3rem);
+            transform: rotate(45deg) translate(-1.3rem, 1.3rem);
+  }
+}
+
 .sidebar-button.open .sidebar-button-lines::after {
   -webkit-transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
           transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
   background-color: #fd7d33;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .sidebar-button.open .sidebar-button-lines::after {
+    -webkit-transform: rotate(-45deg) translate(-1.3rem, -1.3rem);
+            transform: rotate(-45deg) translate(-1.3rem, -1.3rem);
+  }
 }
 
 .spinner {
@@ -286,22 +347,27 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 65vw;
-}
-
-@media only screen and (max-width: 320px) {
-  .main-photoMax-container {
-    height: auto;
-    width: 100vw;
-  }
+  margin-top: 3rem;
 }
 
 .main-photoMax-container .album-container {
   list-style: none;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 767px) {
   .main-photoMax-container .album-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .main-photoMax-container .album-container {
+    margin-top: 3rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -318,11 +384,18 @@ body {
   transition: 0.4s ease;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 767px) {
+  .main-photoMax-container .album-container .photoMax {
+    margin-top: 2rem;
+    height: auto;
+    width: 80vw;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
   .main-photoMax-container .album-container .photoMax {
     height: auto;
-    width: 75vw;
-    margin-top: 0.5rem;
+    width: 90%;
   }
 }
 
@@ -339,7 +412,13 @@ body {
   margin: 0 17rem;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 767px) {
+  .thumbnail {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
   .thumbnail {
     margin: 0;
     margin-top: 0.5rem;
@@ -372,7 +451,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
   height: 100vh;
   color: #fff;
 }
@@ -382,11 +460,19 @@ body {
   height: 100%;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 767px) {
   .hero .portrait-img {
-    max-height: 82vh;
-    max-width: 98vw;
+    width: 95vw;
+    height: auto;
     margin: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero .portrait-img {
+    width: 100vw;
+    height: auto;
+    margin-left: 0;
   }
 }
 
@@ -394,11 +480,18 @@ body {
   margin-left: -8.5rem;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 767px) {
   .hero .author-container {
     display: block;
-    margin-top: 9rem;
+    margin-top: 10rem;
     margin-left: -92%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero .author-container {
+    margin-top: 20rem;
+    margin-left: -90%;
   }
 }
 
@@ -407,9 +500,15 @@ body {
   font-weight: 400;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 767px) {
   .hero .author-container .author {
     font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero .author-container .author {
+    font-size: 4rem;
   }
 }
 
@@ -424,15 +523,21 @@ body {
   font-weight: 200;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 767px) {
   .hero .author-container .hobby {
     font-size: 1.5rem;
   }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .hero .author-container .hobby {
+    font-size: 3rem;
+  }
+}
+
 .title {
   font-size: 2rem;
-  width: 65vw;
+  width: 60vw;
   color: #fff;
   margin: 1rem auto;
   padding-top: 1rem;
@@ -441,7 +546,7 @@ body {
   filter: drop-shadow(0 0 3px #fd7d33);
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 767px) {
   .title {
     margin: 6rem auto;
   }
@@ -464,6 +569,12 @@ body {
       align-content: center;
   margin: 0 auto;
   width: 65vw;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .main-photo-container {
+    width: 100%;
+  }
 }
 
 .main-photo-container .photo-container {
@@ -490,12 +601,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 15rem;
+  margin: 0 17rem;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 767px) {
   .album-title-container {
     margin: 0;
   }
@@ -504,16 +615,23 @@ body {
 .album-title-container .album-title {
   font-size: 1.2rem;
   color: #fff;
-  margin: 1rem 0.5rem 0.2rem;
+  margin: 1rem 0.25rem -0.5rem;
   padding: 0.25rem 0.7rem;
   background-color: #333;
   border-radius: 25px;
   text-decoration: none;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 767px) {
   .album-title-container .album-title {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .album-title-container .album-title {
+    font-size: 1.7rem;
+    margin: 0.5rem;
   }
 }
 
@@ -534,7 +652,13 @@ body {
   margin: 0 17rem;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 767px) {
+  .main-album-container {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
   .main-album-container {
     margin: 0;
   }
@@ -581,22 +705,33 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 74vh;
-  width: 54vw;
+  width: 80vw;
   overflow: hidden;
   overflow-y: scroll;
   -ms-scroll-snap-type: y mandatory;
   scroll-snap-type: y mandatory;
 }
 
+@media only screen and (max-width: 767px) {
+  .photoMax-sub-container {
+    margin-top: 5rem;
+    width: 80vw;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .photoMax-sub-container {
+    margin-top: 3rem;
+    height: 68vh;
+    width: 80vw;
+  }
+}
+
 .album-photoMax-section {
   scroll-snap-align: start;
 }
 
-.links {
-  position: relative;
-}
-
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 767px) {
   .links {
     display: none;
   }
@@ -615,18 +750,27 @@ body {
 }
 
 .links .up {
-  top: 1rem;
+  top: 1.5rem;
   right: 5rem;
+  z-index: 110;
 }
 
 .links .center {
   top: 43vh;
   right: 5rem;
+  z-index: 110;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .links .center {
+    top: 3.5rem;
+  }
 }
 
 .links .bottom {
-  top: 3rem;
+  top: 3.5rem;
   right: 5rem;
+  z-index: 110;
 }
 
 .lightbox {
@@ -636,12 +780,10 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 1rem 17rem;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 767px) {
   .lightbox {
-    display: inline;
-    margin: 0;
+    margin: 0 0 1rem;
   }
 }

@@ -1,17 +1,18 @@
 .main-photoMax-container {
 	display: flex;
 	justify-content: center;
-	width: 65vw;
-
-	@media #{$phone} {
-		height: auto;
-		width: 100vw;
-	}
+	margin-top: 3rem;
 
 	.album-container {
 		list-style: none;
 
 		@media #{$phone} {
+			display: flex;
+			justify-content: center;
+		}
+
+		@media #{$tablet} {
+			margin-top: 3rem;
 			display: flex;
 			justify-content: center;
 		}
@@ -22,9 +23,14 @@
 			transition: 0.4s ease;
 
 			@media #{$phone} {
+				margin-top: 2rem;
 				height: auto;
-				width: 75vw;
-				margin-top: 0.5rem;
+				width: 80vw;
+			}
+
+			@media #{$tablet} {
+				height: auto;
+				width: 90%;
 			}
 		}
 	}

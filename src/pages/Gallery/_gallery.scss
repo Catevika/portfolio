@@ -1,6 +1,6 @@
 .title {
 	font-size: 2rem;
-	width: 65vw;
+	width: 60vw;
 	color: $white;
 	margin: 1rem auto;
 	padding-top: 1rem;
@@ -24,6 +24,10 @@
 	align-content: center;
 	margin: 0 auto;
 	width: 65vw;
+
+	@media #{$tablet} {
+		width: 100%;
+	}
 
 	.photo-container {
 		list-style: none;
