@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useLocalStorage } from '../../custom-hooks/useLocalStorage';
 import Spinner from '../../components/Spinner/Spinner';
-import AlbumList from '../AlbumList/AlbumList';
+import AlbumList from '../../components/AlbumList/AlbumList';
 
 const apiKey = process.env.REACT_APP_FLICKR_API_KEY;
 const userId = process.env.REACT_APP_FLICKR_API_USERID;

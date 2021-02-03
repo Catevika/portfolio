@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import Spinner from '../../components/Spinner/Spinner';
+import Spinner from '../Spinner/Spinner';
 
 const apiKey = process.env.REACT_APP_FLICKR_API_KEY;
 const userId = process.env.REACT_APP_FLICKR_API_USERID;

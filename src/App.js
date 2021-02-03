@@ -3,15 +3,15 @@ import { Switch, Route } from 'react-router-dom';
 
 import Home from './pages/Home/Home';
 import Gallery from './pages/Gallery/Gallery';
-import Album from './pages/Album/Album';
-import Photo from './pages/Photo/Photo';
 import Projects from './pages/Projects/Projects';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
-import ScrollAlbum from './pages/ScrollAlbum/ScrollAlbum';
 
 import Sidebar from './components/Sidebar/Sidebar';
 import SidebarButton from './components/Sidebar/SidebarButton';
+import Album from './components/Album/Album';
+import Photo from './components/Photo/Photo';
+import ScrollAlbum from './components/ScrollAlbum/ScrollAlbum';
 
 import './css/main.css';
 
