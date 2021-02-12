@@ -26,7 +26,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .sidebar {
     width: 85%;
   }
@@ -49,13 +49,13 @@ body {
   padding-left: 1rem;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .sidebar .menu {
     padding-left: 0.5rem;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .sidebar .menu {
     font-size: 1.5rem;
     padding-left: 1rem;
@@ -80,13 +80,13 @@ body {
   background-color: rgba(34, 34, 34, 0.5);
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .sidebar .menu-items {
     background-color: #222;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .sidebar .menu-items {
     background-color: #222;
   }
@@ -161,13 +161,13 @@ body {
   z-index: 120;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .sidebar-button-container {
     left: 0;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .sidebar-button-container {
     top: 1rem;
     left: 1rem;
@@ -191,7 +191,7 @@ body {
   cursor: pointer;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .sidebar-button {
     width: 2rem;
   }
@@ -207,7 +207,7 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .sidebar-button-lines,
   .sidebar-button-lines::before,
   .sidebar-button-lines::after {
@@ -226,7 +226,7 @@ body {
           transform: translateY(-0.5rem);
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .sidebar-button-lines::before {
     -webkit-transform: translateY(-0.7rem);
             transform: translateY(-0.7rem);
@@ -238,7 +238,7 @@ body {
           transform: translateY(0.5rem);
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .sidebar-button-lines::after {
     -webkit-transform: translateY(0.7rem);
             transform: translateY(0.7rem);
@@ -257,7 +257,7 @@ body {
   background-color: #fd7d33;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .sidebar-button.open .sidebar-button-lines::before {
     -webkit-transform: rotate(45deg) translate(-1.3rem, 1.3rem);
             transform: rotate(45deg) translate(-1.3rem, 1.3rem);
@@ -270,7 +270,7 @@ body {
   background-color: #fd7d33;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .sidebar-button.open .sidebar-button-lines::after {
     -webkit-transform: rotate(-45deg) translate(-1.3rem, -1.3rem);
             transform: rotate(-45deg) translate(-1.3rem, -1.3rem);
@@ -354,7 +354,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .album-title-container {
     margin: 0;
   }
@@ -370,13 +370,13 @@ body {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .album-title-container .album-title {
     display: none;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .album-title-container .album-title {
     font-size: 1.7rem;
     margin: 0.5rem;
@@ -400,13 +400,13 @@ body {
   margin: 0 17rem;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .main-album-container {
     margin: 0;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .main-album-container {
     margin: 0;
   }
@@ -429,7 +429,7 @@ body {
   cursor: ne-resize;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .links {
     display: none;
   }
@@ -459,7 +459,7 @@ body {
   z-index: 110;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .links .center {
     top: 3.5rem;
   }
@@ -480,7 +480,7 @@ body {
           justify-content: center;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .lightbox {
     margin: 0 0 1rem;
   }
@@ -500,7 +500,7 @@ body {
   list-style: none;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .main-photoMax-container .album-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -511,7 +511,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .main-photoMax-container .album-container {
     margin-top: 3rem;
     display: -webkit-box;
@@ -530,7 +530,7 @@ body {
   transition: 0.4s ease;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .main-photoMax-container .album-container .photoMax {
     margin-top: 2rem;
     height: auto;
@@ -538,7 +538,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .main-photoMax-container .album-container .photoMax {
     height: auto;
     width: 90%;
@@ -558,13 +558,13 @@ body {
   margin: 0 17rem;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .thumbnail {
     margin: 0;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .thumbnail {
     margin: 0;
     margin-top: 0.5rem;
@@ -621,14 +621,14 @@ body {
   scroll-snap-type: y mandatory;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .photoMax-sub-container {
     margin-top: 5rem;
     width: 80vw;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .photoMax-sub-container {
     margin-top: 3rem;
     height: 68vh;
@@ -656,7 +656,7 @@ body {
   height: 100%;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .hero .portrait-img {
     width: 95vw;
     height: auto;
@@ -664,7 +664,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .hero .portrait-img {
     width: 100vw;
     height: auto;
@@ -676,7 +676,7 @@ body {
   margin-left: -8.5rem;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .hero .author-container {
     display: block;
     margin-top: 10rem;
@@ -684,7 +684,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .hero .author-container {
     margin-top: 20rem;
     margin-left: -90%;
@@ -696,13 +696,13 @@ body {
   font-weight: 400;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .hero .author-container .author {
     font-size: 2.5rem;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .hero .author-container .author {
     font-size: 4rem;
   }
@@ -719,13 +719,13 @@ body {
   font-weight: 200;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .hero .author-container .hobby {
     font-size: 1.5rem;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .hero .author-container .hobby {
     font-size: 3rem;
   }
@@ -742,7 +742,7 @@ body {
   filter: drop-shadow(0 0 3px #fd7d33);
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .title {
     margin: 6rem auto;
   }
@@ -767,7 +767,7 @@ body {
   width: 65vw;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .main-photo-container {
     width: 100%;
   }
