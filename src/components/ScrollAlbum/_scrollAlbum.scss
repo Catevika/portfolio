@@ -21,12 +21,12 @@
 	-ms-scroll-snap-type: y mandatory;
 	scroll-snap-type: y mandatory;
 
-	@media #{$phone} {
+	@include phone {
 		margin-top: 5rem;
 		width: 80vw;
 	}
 
-	@media #{$tablet} {
+	@include tablet {
 		margin-top: 3rem;
 		height: 68vh;
 		width: 80vw;

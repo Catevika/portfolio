@@ -5,7 +5,7 @@
 	margin: 0 17rem;
 	transition: all 0.3s ease-in-out;
 
-	@media #{$phone} {
+	@include phone {
 		margin: 0;
 	}
 
@@ -18,11 +18,11 @@
 		border-radius: 25px;
 		text-decoration: none;
 
-		@media #{$phone} {
+		@include phone {
 			display: none;
 		}
 
-		@media #{$tablet} {
+		@include tablet {
 			font-size: 1.7rem;
 			margin: 0.5rem;
 		}

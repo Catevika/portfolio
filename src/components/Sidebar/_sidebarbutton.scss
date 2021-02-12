@@ -12,11 +12,11 @@
 	padding: 0.25rem 0.5rem;
 	z-index: 120;
 
-	@media #{$phone} {
+	@include phone {
 		left: 0;
 	}
 
-	@media #{$tablet} {
+	@include tablet {
 		top: 1rem;
 		left: 1rem;
 	}
@@ -32,7 +32,7 @@
 	z-index: 100;
 	cursor: pointer;
 
-	@media #{$tablet} {
+	@include tablet {
 		width: 2rem;
 	}
 }
@@ -45,7 +45,7 @@
 	background-color: $white;
 	transition: all 0.5s ease-in-out;
 
-	@media #{$tablet} {
+	@include tablet {
 		width: 2rem;
 	}
 }
@@ -59,7 +59,7 @@
 .sidebar-button-lines::before {
 	transform: translateY(-0.5rem);
 
-	@media #{$tablet} {
+	@include tablet {
 		transform: translateY(-0.7rem);
 	}
 }
@@ -67,7 +67,7 @@
 .sidebar-button-lines::after {
 	transform: translateY(0.5rem);
 
-	@media #{$tablet} {
+	@include tablet {
 		transform: translateY(0.7rem);
 	}
 }
@@ -82,7 +82,7 @@
 	transform: rotate(45deg) translate(-1.5rem, 1.5rem);
 	background-color: $accentuation-color;
 
-	@media #{$tablet} {
+	@include tablet {
 		transform: rotate(45deg) translate(-1.3rem, 1.3rem);
 	}
 }
@@ -91,7 +91,7 @@
 	transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
 	background-color: $accentuation-color;
 
-	@media #{$tablet} {
+	@include tablet {
 		transform: rotate(-45deg) translate(-1.3rem, -1.3rem);
 	}
 }

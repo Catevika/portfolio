@@ -8,13 +8,13 @@
 		margin-left: 15.5rem;
 		height: 100%;
 
-		@media #{$phone} {
+		@include phone {
 			width: 95vw;
 			height: auto;
 			margin: 0.5rem;
 		}
 
-		@media #{$tablet} {
+		@include tablet {
 			width: 100vw;
 			height: auto;
 			margin-left: 0;
@@ -24,13 +24,13 @@
 	.author-container {
 		margin-left: -8.5rem;
 
-		@media #{$phone} {
+		@include phone {
 			display: block;
 			margin-top: 10rem;
 			margin-left: -92%;
 		}
 
-		@media #{$tablet} {
+		@include tablet {
 			margin-top: 20rem;
 			margin-left: -90%;
 		}
@@ -39,11 +39,11 @@
 			font-size: 3.5rem;
 			font-weight: 400;
 
-			@media #{$phone} {
+			@include phone {
 				font-size: 2.5rem;
 			}
 
-			@media #{$tablet} {
+			@include tablet {
 				font-size: 4rem;
 			}
 		}
@@ -56,11 +56,11 @@
 			font-size: 2.5rem;
 			font-weight: 200;
 
-			@media #{$phone} {
+			@include phone {
 				font-size: 1.5rem;
 			}
 
-			@media #{$tablet} {
+			@include tablet {
 				font-size: 3rem;
 			}
 		}

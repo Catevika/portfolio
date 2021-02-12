@@ -1,5 +1,5 @@
 .links {
-	@media #{$phone} {
+	@include phone {
 		display: none;
 	}
 
@@ -26,7 +26,7 @@
 		right: 5rem;
 		z-index: 110;
 
-		@media #{$tablet} {
+		@include tablet {
 			top: 3.5rem;
 		}
 	}
@@ -42,7 +42,7 @@
 	display: flex;
 	justify-content: center;
 
-	@media #{$phone} {
+	@include phone {
 		margin: 0 0 1rem;
 	}
 }

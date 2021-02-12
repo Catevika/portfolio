@@ -8,11 +8,11 @@
 	width: 15.5rem;
 	transition: all 0.3s ease-in-out;
 
-	@media #{$phone} {
+	@include phone {
 		width: 85%;
 	}
 
-	// @media #{$tablet} {
+	// @include tablet {
 	// 	width: 80%;
 	// }
 
@@ -30,11 +30,11 @@
 		width: 100%;
 		padding-left: 1rem;
 
-		@media #{$phone} {
+		@include phone {
 			padding-left: 0.5rem;
 		}
 
-		@media #{$tablet} {
+		@include tablet {
 			font-size: 1.5rem;
 			padding-left: 1rem;
 		}
@@ -49,11 +49,11 @@
 		height: 100%;
 		background-color: rgba($sidebar-bg-color, 0.5);
 
-		@media #{$phone} {
+		@include phone {
 			background-color: $sidebar-bg-color;
 		}
 
-		@media #{$tablet} {
+		@include tablet {
 			background-color: $sidebar-bg-color;
 		}
 

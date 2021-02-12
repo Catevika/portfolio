@@ -5,11 +5,11 @@
 	justify-content: center;
 	margin: 0 17rem;
 
-	@media #{$phone} {
+	@include phone {
 		margin: 0;
 	}
 
-	@media #{$tablet} {
+	@include tablet {
 		margin: 0;
 	}
 
